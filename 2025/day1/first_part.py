@@ -16,6 +16,7 @@ def find_password(file_path: str) -> int:
                 start = (start + magnitude) % 100
             if start == 0:
                 password += 1
+    print(start)
     return password
 
 password = find_password(file_path)
