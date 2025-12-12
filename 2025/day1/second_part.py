@@ -9,6 +9,7 @@ def count_clicks(file_path: str) -> int:
             stripped = line.strip()
             if not stripped:
                 continue
+
             direction = stripped[0].upper()
             magnitude = int(stripped[1:])
             if direction == "L":
@@ -18,6 +19,7 @@ def count_clicks(file_path: str) -> int:
                 if magnitude >= temp:
                     clicks += 1 + (magnitude - temp) // 100
                 start = (start - magnitude) % 100
+                
             else:
                 temp = (100 - start) % 100
                 if temp == 0:
